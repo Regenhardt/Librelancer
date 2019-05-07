@@ -7,8 +7,9 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>LancerEdit</RootNamespace>
     <AssemblyName>LancerEdit</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <ApplicationIcon>..\..\..\editoricons\appicon\reactor.ico</ApplicationIcon>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -117,12 +118,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="LancerEdit.targets" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="defaulttexture.dds" />
     <EmbeddedResource Include="..\..\..\editoricons\appicon\reactor_64.png">

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -10,7 +10,8 @@
     <RootNamespace>LibreLancer</RootNamespace>
     <AssemblyName>LibreLancer.Base</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -173,6 +174,8 @@
     <Compile Include="CullFaces.cs" />
     <Compile Include="SSE\SSEMath.cs">
       <DependentUpon>SSEMath.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ComputeShader.cs" />
     <Compile Include="ShaderStorageBuffer.cs" />
@@ -197,7 +200,9 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\extern\FontConfigSharp\FontConfigSharp\FontConfigSharp.csproj">
       <Project>{CBBDC35F-DCA3-453C-A9E3-29EE7E43DE85}</Project>
@@ -221,7 +226,5 @@
     <None Include="SSE\embedding.h" />
     <None Include="SSE\README.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dialogs\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
