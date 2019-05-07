@@ -1,4 +1,4 @@
-﻿// MIT License - Copyright (c) Callum McGing
+// MIT License - Copyright (c) Callum McGing
 // This file is subject to the terms and conditions defined in
 // LICENSE, which is part of this source code package
 
@@ -19,7 +19,7 @@ namespace LibreLancer.Physics
         DebugDrawModes drawMode = DebugDrawModes.DrawWireframe;
         public override DebugDrawModes DebugMode { get => drawMode; set => drawMode = value; }
 
-        public override void Draw3dText(ref BM.Vector3 location, string textString)
+        public override void Draw3DText(ref BM.Vector3 location, string textString)
         {
             
         }
